@@ -68,7 +68,7 @@ data "archive_file" "zip_the_python_code" {
 # In terraform ${path.module} is the current directory.
 resource "aws_lambda_function" "terraform_lambda_func" {
  filename                       = "${path.module}/python/hello-python.zip"
- function_name                  = "Jhooq-Lambda-Function"
+ function_name                  = "AWS-Lambda-Function"
  role                           = aws_iam_role.lambda_role.arn
  handler                        = "hello-python.lambda_handler"
  runtime                        = "python3.8"
